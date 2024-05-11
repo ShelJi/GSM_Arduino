@@ -28,7 +28,7 @@ void read(){
 
     if (msg.indexOf("LIGHT ON") != -1) {            // checks command
       digitalWrite(light,HIGH);                     // turn lights on
-      gsm.println("AT+CMGS=\"+919488231905\"\r");   // Receiver’s Mobile Number
+      gsm.println("AT+CMGS=\"+91\"\r");   // Receiver’s Mobile Number
       delay(1000);
       gsm.println("LIGHT TURNED ON");               // send message as light turned on
       delay(100);
@@ -36,7 +36,7 @@ void read(){
     }
     else if (msg.indexOf("LIGHT OFF") != -1) {
       digitalWrite(light,LOW);
-      gsm.println("AT+CMGS=\"+919488231905\"\r"); 
+      gsm.println("AT+CMGS=\"+91\"\r"); 
       delay(1000);
       gsm.println("LIGHT TURNED OFF");
       delay(100);
@@ -44,7 +44,7 @@ void read(){
     }
     else if (msg.indexOf("FAN ON") != -1) {
       digitalWrite(fan,HIGH);
-      gsm.println("AT+CMGS=\"+919488231905\"\r"); 
+      gsm.println("AT+CMGS=\"+91\"\r"); 
       delay(1000);
       gsm.println("FAN TURNED ON");
       delay(100);
@@ -52,7 +52,7 @@ void read(){
     }
     else if (msg.indexOf("FAN OFF") != -1) {
       digitalWrite(fan,LOW);
-      gsm.println("AT+CMGS=\"+919488231905\"\r"); 
+      gsm.println("AT+CMGS=\"+91\"\r"); 
       delay(1000);
       gsm.println("FAN TURNED OFF");
       delay(100);
